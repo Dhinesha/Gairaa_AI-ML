@@ -1,0 +1,150 @@
+{
+  "nodes": [
+    {
+      "id": "Alice",
+      "type": "Person",
+      "content": "Alice",
+      "properties": {
+        "role": "Data Scientist",
+        "company": "TechCorp"
+      },
+      "metadata": {
+        "role": "Data Scientist",
+        "company": "TechCorp"
+      }
+    },
+    {
+      "id": "Bob",
+      "type": "Person",
+      "content": "Bob",
+      "properties": {
+        "role": "Engineer",
+        "company": "TechCorp"
+      },
+      "metadata": {
+        "role": "Engineer",
+        "company": "TechCorp"
+      }
+    },
+    {
+      "id": "TechCorp",
+      "type": "Organisation",
+      "content": "TechCorp",
+      "properties": {
+        "industry": "AI",
+        "size": "Large"
+      },
+      "metadata": {
+        "industry": "AI",
+        "size": "Large"
+      }
+    },
+    {
+      "id": "ProjectAI",
+      "type": "Project",
+      "content": "ProjectAI",
+      "properties": {
+        "status": "Active",
+        "domain": "Machine Learning"
+      },
+      "metadata": {
+        "status": "Active",
+        "domain": "Machine Learning"
+      }
+    },
+    {
+      "id": "KnowledgeGraph",
+      "type": "Concept",
+      "content": "KnowledgeGraph",
+      "properties": {
+        "description": "Graph-based knowledge representation"
+      },
+      "metadata": {
+        "description": "Graph-based knowledge representation"
+      }
+    },
+    {
+      "id": "Semantica",
+      "type": "Tool",
+      "content": "Semantica",
+      "properties": {
+        "version": "0.6.5",
+        "type": "Open Source"
+      },
+      "metadata": {
+        "version": "0.6.5",
+        "type": "Open Source"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "71fffd43-b3da-5ffd-a6b2-e92a52de5dfb",
+      "familyId": "71fffd43-b3da-5ffd-a6b2-e92a52de5dfb",
+      "source": "Alice",
+      "target": "TechCorp",
+      "type": "works_at",
+      "weight": 1.0
+    },
+    {
+      "id": "defc298a-d5df-51b5-975d-1282802061fa",
+      "familyId": "defc298a-d5df-51b5-975d-1282802061fa",
+      "source": "Bob",
+      "target": "TechCorp",
+      "type": "works_at",
+      "weight": 1.0
+    },
+    {
+      "id": "d1775e6c-604f-52f5-9435-7b0d4395fc32",
+      "familyId": "d1775e6c-604f-52f5-9435-7b0d4395fc32",
+      "source": "Alice",
+      "target": "ProjectAI",
+      "type": "leads",
+      "weight": 1.0
+    },
+    {
+      "id": "b7455f2c-e8c4-5037-88af-046359e58cbb",
+      "familyId": "b7455f2c-e8c4-5037-88af-046359e58cbb",
+      "source": "Bob",
+      "target": "ProjectAI",
+      "type": "contributes_to",
+      "weight": 1.0
+    },
+    {
+      "id": "0d039f75-8f7d-58dd-8167-9467522fa790",
+      "familyId": "0d039f75-8f7d-58dd-8167-9467522fa790",
+      "source": "ProjectAI",
+      "target": "KnowledgeGraph",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "id": "cb47bb81-493f-57b2-b874-01aa90d96c94",
+      "familyId": "cb47bb81-493f-57b2-b874-01aa90d96c94",
+      "source": "ProjectAI",
+      "target": "Semantica",
+      "type": "powered_by",
+      "weight": 1.0
+    },
+    {
+      "id": "89ab54e6-2854-5e7b-ad77-ab700345ffb6",
+      "familyId": "89ab54e6-2854-5e7b-ad77-ab700345ffb6",
+      "source": "TechCorp",
+      "target": "ProjectAI",
+      "type": "owns",
+      "weight": 1.0
+    },
+    {
+      "id": "935ec3e1-291d-5ec3-8e86-7374672d3eb7",
+      "familyId": "935ec3e1-291d-5ec3-8e86-7374672d3eb7",
+      "source": "Alice",
+      "target": "KnowledgeGraph",
+      "type": "researches",
+      "weight": 1.0
+    }
+  ],
+  "statistics": {
+    "node_count": 6,
+    "edge_count": 8
+  }
+}

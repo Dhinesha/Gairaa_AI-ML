@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <key id="type" for="node" attr.name="type" attr.type="string"/>
+  <key id="confidence" for="node" attr.name="confidence" attr.type="double"/>
+
+  <graph id="G" edgedefault="directed">
+
+    <node id="Alice">
+      <data key="label"></data>
+      <data key="type">Person</data>
+    </node>
+    <node id="Bob">
+      <data key="label"></data>
+      <data key="type">Person</data>
+    </node>
+    <node id="TechCorp">
+      <data key="label"></data>
+      <data key="type">Organisation</data>
+    </node>
+    <node id="ProjectAI">
+      <data key="label"></data>
+      <data key="type">Project</data>
+    </node>
+    <node id="KnowledgeGraph">
+      <data key="label"></data>
+      <data key="type">Concept</data>
+    </node>
+    <node id="Semantica">
+      <data key="label"></data>
+      <data key="type">Tool</data>
+    </node>
+    <node id="a80ad6f3-cac4-4fce-a2b6-38071b5add9c">
+      <data key="label"></data>
+      <data key="type">decision</data>
+    </node>
+    <node id="category_project_approval">
+      <data key="label"></data>
+      <data key="type">category</data>
+    </node>
+    <node id="maker_ai_agent">
+      <data key="label"></data>
+      <data key="type">decision_maker</data>
+    </node>
+    <node id="fca3304e-7bb2-414b-8b6c-2132d39fb23b">
+      <data key="label"></data>
+      <data key="type">decision</data>
+    </node>
+    <node id="category_tool_selection">
+      <data key="label"></data>
+      <data key="type">category</data>
+    </node>
+    <node id="POL-001:1.0">
+      <data key="label"></data>
+      <data key="type">Policy</data>
+    </node>
+    <node id="d581edee-be60-41c7-93e0-d20446cc4159">
+      <data key="label"></data>
+      <data key="type">decision</data>
+    </node>
+    <node id="maker_ai_governance_agent">
+      <data key="label"></data>
+      <data key="type">decision_maker</data>
+    </node>
+
+    <edge source="Alice" target="TechCorp">
+      <data key="label">works_at</data>
+    </edge>
+    <edge source="Bob" target="TechCorp">
+      <data key="label">works_at</data>
+    </edge>
+    <edge source="Alice" target="ProjectAI">
+      <data key="label">leads</data>
+    </edge>
+    <edge source="Bob" target="ProjectAI">
+      <data key="label">contributes_to</data>
+    </edge>
+    <edge source="ProjectAI" target="KnowledgeGraph">
+      <data key="label">uses</data>
+    </edge>
+    <edge source="ProjectAI" target="Semantica">
+      <data key="label">powered_by</data>
+    </edge>
+    <edge source="TechCorp" target="ProjectAI">
+      <data key="label">owns</data>
+    </edge>
+    <edge source="Alice" target="KnowledgeGraph">
+      <data key="label">researches</data>
+    </edge>
+    <edge source="a80ad6f3-cac4-4fce-a2b6-38071b5add9c" target="Alice">
+      <data key="label">involves</data>
+    </edge>
+    <edge source="a80ad6f3-cac4-4fce-a2b6-38071b5add9c" target="ProjectAI">
+      <data key="label">involves</data>
+    </edge>
+    <edge source="a80ad6f3-cac4-4fce-a2b6-38071b5add9c" target="TechCorp">
+      <data key="label">involves</data>
+    </edge>
+    <edge source="a80ad6f3-cac4-4fce-a2b6-38071b5add9c" target="category_project_approval">
+      <data key="label">belongs_to</data>
+    </edge>
+    <edge source="a80ad6f3-cac4-4fce-a2b6-38071b5add9c" target="maker_ai_agent">
+      <data key="label">made_by</data>
+    </edge>
+    <edge source="fca3304e-7bb2-414b-8b6c-2132d39fb23b" target="ProjectAI">
+      <data key="label">involves</data>
+    </edge>
+    <edge source="fca3304e-7bb2-414b-8b6c-2132d39fb23b" target="Semantica">
+      <data key="label">involves</data>
+    </edge>
+    <edge source="fca3304e-7bb2-414b-8b6c-2132d39fb23b" target="KnowledgeGraph">
+      <data key="label">involves</data>
+    </edge>
+    <edge source="fca3304e-7bb2-414b-8b6c-2132d39fb23b" target="category_tool_selection">
+      <data key="label">belongs_to</data>
+    </edge>
+    <edge source="fca3304e-7bb2-414b-8b6c-2132d39fb23b" target="maker_ai_agent">
+      <data key="label">made_by</data>
+    </edge>
+    <edge source="d581edee-be60-41c7-93e0-d20446cc4159" target="Alice">
+      <data key="label">involves</data>
+    </edge>
+    <edge source="d581edee-be60-41c7-93e0-d20446cc4159" target="ProjectAI">
+      <data key="label">involves</data>
+    </edge>
+    <edge source="d581edee-be60-41c7-93e0-d20446cc4159" target="category_project_approval">
+      <data key="label">belongs_to</data>
+    </edge>
+    <edge source="d581edee-be60-41c7-93e0-d20446cc4159" target="maker_ai_governance_agent">
+      <data key="label">made_by</data>
+    </edge>
+  </graph>
+</graphml>

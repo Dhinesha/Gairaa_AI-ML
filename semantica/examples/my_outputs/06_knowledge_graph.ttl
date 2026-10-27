@@ -1,0 +1,82 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix semantica: <https://semantica.dev/ns#> .
+
+<Alice> a <Person> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<Bob> a <Person> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<TechCorp> a <Organisation> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<ProjectAI> a <Project> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<KnowledgeGraph> a <Concept> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<Semantica> a <Tool> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<a80ad6f3-cac4-4fce-a2b6-38071b5add9c> a <decision> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<category_project_approval> a <category> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<maker_ai_agent> a <decision_maker> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<fca3304e-7bb2-414b-8b6c-2132d39fb23b> a <decision> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<category_tool_selection> a <category> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<POL-001:1.0> a <Policy> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<d581edee-be60-41c7-93e0-d20446cc4159> a <decision> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<maker_ai_governance_agent> a <decision_maker> ;
+    semantica:text "" ;
+    semantica:confidence 1.0 .
+
+<Alice> <works_at> <TechCorp> .
+<Bob> <works_at> <TechCorp> .
+<Alice> <leads> <ProjectAI> .
+<Bob> <contributes_to> <ProjectAI> .
+<ProjectAI> <uses> <KnowledgeGraph> .
+<ProjectAI> <powered_by> <Semantica> .
+<TechCorp> <owns> <ProjectAI> .
+<Alice> <researches> <KnowledgeGraph> .
+<a80ad6f3-cac4-4fce-a2b6-38071b5add9c> <involves> <Alice> .
+<a80ad6f3-cac4-4fce-a2b6-38071b5add9c> <involves> <ProjectAI> .
+<a80ad6f3-cac4-4fce-a2b6-38071b5add9c> <involves> <TechCorp> .
+<a80ad6f3-cac4-4fce-a2b6-38071b5add9c> <belongs_to> <category_project_approval> .
+<a80ad6f3-cac4-4fce-a2b6-38071b5add9c> <made_by> <maker_ai_agent> .
+<fca3304e-7bb2-414b-8b6c-2132d39fb23b> <involves> <ProjectAI> .
+<fca3304e-7bb2-414b-8b6c-2132d39fb23b> <involves> <Semantica> .
+<fca3304e-7bb2-414b-8b6c-2132d39fb23b> <involves> <KnowledgeGraph> .
+<fca3304e-7bb2-414b-8b6c-2132d39fb23b> <belongs_to> <category_tool_selection> .
+<fca3304e-7bb2-414b-8b6c-2132d39fb23b> <made_by> <maker_ai_agent> .
+<d581edee-be60-41c7-93e0-d20446cc4159> <involves> <Alice> .
+<d581edee-be60-41c7-93e0-d20446cc4159> <involves> <ProjectAI> .
+<d581edee-be60-41c7-93e0-d20446cc4159> <belongs_to> <category_project_approval> .
+<d581edee-be60-41c7-93e0-d20446cc4159> <made_by> <maker_ai_governance_agent> .

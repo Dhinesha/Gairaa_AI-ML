@@ -1,0 +1,289 @@
+metadata:
+  exported_at: '2026-08-27T18:45:33.397366'
+  version: '1.0'
+entities:
+- id: Alice
+  type: Person
+  content: Alice
+  properties:
+    role: Data Scientist
+    company: TechCorp
+  metadata:
+    role: Data Scientist
+    company: TechCorp
+- id: Bob
+  type: Person
+  content: Bob
+  properties:
+    role: Engineer
+    company: TechCorp
+  metadata:
+    role: Engineer
+    company: TechCorp
+- id: TechCorp
+  type: Organisation
+  content: TechCorp
+  properties:
+    industry: AI
+    size: Large
+  metadata:
+    industry: AI
+    size: Large
+- id: ProjectAI
+  type: Project
+  content: ProjectAI
+  properties:
+    status: Active
+    domain: Machine Learning
+  metadata:
+    status: Active
+    domain: Machine Learning
+- id: KnowledgeGraph
+  type: Concept
+  content: KnowledgeGraph
+  properties:
+    description: Graph-based knowledge representation
+  metadata:
+    description: Graph-based knowledge representation
+- id: Semantica
+  type: Tool
+  content: Semantica
+  properties:
+    version: 0.6.5
+    type: Open Source
+  metadata:
+    version: 0.6.5
+    type: Open Source
+- id: a80ad6f3-cac4-4fce-a2b6-38071b5add9c
+  type: decision
+  content: Should ProjectAI continue into Phase 2?
+  properties: &id001
+    category: project_approval
+    outcome: approved_for_phase2
+    confidence: 0.95
+    timestamp: 1787836507.653859
+    scenario: Should ProjectAI continue into Phase 2?
+    decision_maker: ai_agent
+    reasoning: 40% efficiency gain, strategic alignment confirmed.
+  metadata: *id001
+- id: category_project_approval
+  type: category
+  content: category_project_approval
+  properties: &id002
+    name: project_approval
+  metadata: *id002
+- id: maker_ai_agent
+  type: decision_maker
+  content: maker_ai_agent
+  properties: &id003
+    name: ai_agent
+  metadata: *id003
+- id: fca3304e-7bb2-414b-8b6c-2132d39fb23b
+  type: decision
+  content: Which framework for knowledge graphs?
+  properties: &id004
+    category: tool_selection
+    outcome: selected_semantica
+    confidence: 0.88
+    timestamp: 1787836507.654854
+    scenario: Which framework for knowledge graphs?
+    decision_maker: ai_agent
+    reasoning: 'Semantica: open-source, W3C standards, self-hostable.'
+  metadata: *id004
+- id: category_tool_selection
+  type: category
+  content: category_tool_selection
+  properties: &id005
+    name: tool_selection
+  metadata: *id005
+- id: POL-001:1.0
+  type: Policy
+  content: Project Approval Policy
+  properties: &id006
+    policy_id: POL-001
+    name: Project Approval Policy
+    description: min confidence 0.80, valid category required.
+    rules:
+      min_confidence: 0.8
+      required_categories:
+      - project_approval
+      - tool_selection
+      allowed_outcomes:
+      - approved_for_phase2
+      - selected_semantica
+      - rejected
+    category: project_approval
+    version: '1.0'
+    created_at: '2026-08-27T18:45:07.655991'
+    updated_at: '2026-08-27T18:45:07.655991'
+    metadata: {}
+  metadata: *id006
+- id: d581edee-be60-41c7-93e0-d20446cc4159
+  type: decision
+  content: Should ProjectAI continue into Phase 2?
+  properties: &id007
+    category: project_approval
+    outcome: approved_for_phase2
+    confidence: 0.95
+    timestamp: 1787836507.655991
+    scenario: Should ProjectAI continue into Phase 2?
+    decision_maker: ai_governance_agent
+    reasoning: Strong Q3 performance and strategic alignment confirmed.
+    reviewed_by: Alice
+  metadata: *id007
+- id: maker_ai_governance_agent
+  type: decision_maker
+  content: maker_ai_governance_agent
+  properties: &id008
+    name: ai_governance_agent
+  metadata: *id008
+relationships:
+- id: 71fffd43-b3da-5ffd-a6b2-e92a52de5dfb
+  familyId: 71fffd43-b3da-5ffd-a6b2-e92a52de5dfb
+  source: Alice
+  target: TechCorp
+  type: works_at
+  weight: 1.0
+- id: defc298a-d5df-51b5-975d-1282802061fa
+  familyId: defc298a-d5df-51b5-975d-1282802061fa
+  source: Bob
+  target: TechCorp
+  type: works_at
+  weight: 1.0
+- id: d1775e6c-604f-52f5-9435-7b0d4395fc32
+  familyId: d1775e6c-604f-52f5-9435-7b0d4395fc32
+  source: Alice
+  target: ProjectAI
+  type: leads
+  weight: 1.0
+- id: b7455f2c-e8c4-5037-88af-046359e58cbb
+  familyId: b7455f2c-e8c4-5037-88af-046359e58cbb
+  source: Bob
+  target: ProjectAI
+  type: contributes_to
+  weight: 1.0
+- id: 0d039f75-8f7d-58dd-8167-9467522fa790
+  familyId: 0d039f75-8f7d-58dd-8167-9467522fa790
+  source: ProjectAI
+  target: KnowledgeGraph
+  type: uses
+  weight: 1.0
+- id: cb47bb81-493f-57b2-b874-01aa90d96c94
+  familyId: cb47bb81-493f-57b2-b874-01aa90d96c94
+  source: ProjectAI
+  target: Semantica
+  type: powered_by
+  weight: 1.0
+- id: 89ab54e6-2854-5e7b-ad77-ab700345ffb6
+  familyId: 89ab54e6-2854-5e7b-ad77-ab700345ffb6
+  source: TechCorp
+  target: ProjectAI
+  type: owns
+  weight: 1.0
+- id: 935ec3e1-291d-5ec3-8e86-7374672d3eb7
+  familyId: 935ec3e1-291d-5ec3-8e86-7374672d3eb7
+  source: Alice
+  target: KnowledgeGraph
+  type: researches
+  weight: 1.0
+- id: 1051fab6-396c-5d6a-be4b-845b8930e7cf
+  familyId: 1051fab6-396c-5d6a-be4b-845b8930e7cf
+  source: a80ad6f3-cac4-4fce-a2b6-38071b5add9c
+  target: Alice
+  type: involves
+  weight: 1.0
+  metadata:
+    confidence: 0.95
+- id: 26bfda81-00c5-51c5-aea1-152fb3eec5b2
+  familyId: 26bfda81-00c5-51c5-aea1-152fb3eec5b2
+  source: a80ad6f3-cac4-4fce-a2b6-38071b5add9c
+  target: ProjectAI
+  type: involves
+  weight: 1.0
+  metadata:
+    confidence: 0.95
+- id: 9a8c521c-93fe-5797-bb2d-930f3d3dd0c1
+  familyId: 9a8c521c-93fe-5797-bb2d-930f3d3dd0c1
+  source: a80ad6f3-cac4-4fce-a2b6-38071b5add9c
+  target: TechCorp
+  type: involves
+  weight: 1.0
+  metadata:
+    confidence: 0.95
+- id: 3d610a3a-b973-5398-b504-80044d89ff2c
+  familyId: 3d610a3a-b973-5398-b504-80044d89ff2c
+  source: a80ad6f3-cac4-4fce-a2b6-38071b5add9c
+  target: category_project_approval
+  type: belongs_to
+  weight: 1.0
+- id: 05c2b106-5acc-5fba-a80c-ebd50cd6615c
+  familyId: 05c2b106-5acc-5fba-a80c-ebd50cd6615c
+  source: a80ad6f3-cac4-4fce-a2b6-38071b5add9c
+  target: maker_ai_agent
+  type: made_by
+  weight: 1.0
+- id: 09d29603-0a70-5f2e-9482-0195d34b38c7
+  familyId: 09d29603-0a70-5f2e-9482-0195d34b38c7
+  source: fca3304e-7bb2-414b-8b6c-2132d39fb23b
+  target: ProjectAI
+  type: involves
+  weight: 1.0
+  metadata:
+    confidence: 0.88
+- id: fb3a96a3-2434-5daf-b057-5e7d6076c175
+  familyId: fb3a96a3-2434-5daf-b057-5e7d6076c175
+  source: fca3304e-7bb2-414b-8b6c-2132d39fb23b
+  target: Semantica
+  type: involves
+  weight: 1.0
+  metadata:
+    confidence: 0.88
+- id: 4777db43-d7e5-5747-b78d-32bb0b6b897f
+  familyId: 4777db43-d7e5-5747-b78d-32bb0b6b897f
+  source: fca3304e-7bb2-414b-8b6c-2132d39fb23b
+  target: KnowledgeGraph
+  type: involves
+  weight: 1.0
+  metadata:
+    confidence: 0.88
+- id: d2d62100-38a6-5fe4-bdd9-488f55768c02
+  familyId: d2d62100-38a6-5fe4-bdd9-488f55768c02
+  source: fca3304e-7bb2-414b-8b6c-2132d39fb23b
+  target: category_tool_selection
+  type: belongs_to
+  weight: 1.0
+- id: 9dd389eb-5ce2-5233-8756-0008e67cb7a4
+  familyId: 9dd389eb-5ce2-5233-8756-0008e67cb7a4
+  source: fca3304e-7bb2-414b-8b6c-2132d39fb23b
+  target: maker_ai_agent
+  type: made_by
+  weight: 1.0
+- id: 9a8847b3-029c-58fb-b40f-a6d934fee453
+  familyId: 9a8847b3-029c-58fb-b40f-a6d934fee453
+  source: d581edee-be60-41c7-93e0-d20446cc4159
+  target: Alice
+  type: involves
+  weight: 1.0
+  metadata:
+    confidence: 0.95
+- id: 19829c20-385c-5d32-9edd-b13f07d8928a
+  familyId: 19829c20-385c-5d32-9edd-b13f07d8928a
+  source: d581edee-be60-41c7-93e0-d20446cc4159
+  target: ProjectAI
+  type: involves
+  weight: 1.0
+  metadata:
+    confidence: 0.95
+- id: 9732f68f-2ac8-55ad-a40a-299857900f66
+  familyId: 9732f68f-2ac8-55ad-a40a-299857900f66
+  source: d581edee-be60-41c7-93e0-d20446cc4159
+  target: category_project_approval
+  type: belongs_to
+  weight: 1.0
+- id: e54442ef-a8ef-54b8-a62a-4e320668337b
+  familyId: e54442ef-a8ef-54b8-a62a-4e320668337b
+  source: d581edee-be60-41c7-93e0-d20446cc4159
+  target: maker_ai_governance_agent
+  type: made_by
+  weight: 1.0
+triplets: []

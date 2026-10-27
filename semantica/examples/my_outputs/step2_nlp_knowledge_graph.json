@@ -1,0 +1,107 @@
+{
+  "entities": [
+    {
+      "id": "Mention",
+      "name": "Mention",
+      "type": "UNKNOWN",
+      "properties": {},
+      "relationships": [],
+      "metadata": {
+        "extraction_method": "last_resort_pattern",
+        "batch_index": 0,
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "Mention",
+              "name": "Mention",
+              "source": null
+            },
+            {
+              "id": "Mention",
+              "name": "Mention",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        }
+      },
+      "merged_from": [
+        "Mention",
+        "Mention"
+      ],
+      "merge_strategy": "keep_most_complete"
+    },
+    {
+      "id": "Semantica",
+      "name": "Semantica",
+      "type": "UNKNOWN",
+      "properties": {},
+      "relationships": [],
+      "metadata": {
+        "extraction_method": "last_resort_pattern",
+        "batch_index": 0,
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "Semantica",
+              "name": "Semantica",
+              "source": null
+            },
+            {
+              "id": "Semantica",
+              "name": "Semantica",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        }
+      },
+      "merged_from": [
+        "Semantica",
+        "Semantica"
+      ],
+      "merge_strategy": "keep_most_complete"
+    },
+    {
+      "id": "None",
+      "name": "None",
+      "type": "UNKNOWN",
+      "properties": {},
+      "relationships": [],
+      "metadata": {
+        "extraction_method": "last_resort_pattern",
+        "batch_index": 0,
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "None",
+              "name": "None",
+              "source": null
+            },
+            {
+              "id": "None",
+              "name": "None",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        }
+      },
+      "merged_from": [
+        "None",
+        "None"
+      ],
+      "merge_strategy": "keep_most_complete"
+    }
+  ],
+  "relationships": [],
+  "metadata": {
+    "num_entities": 3,
+    "num_relationships": 0,
+    "temporal_enabled": false,
+    "timestamp": "2026-08-25T20:48:21.624586",
+    "entity_resolution_applied": true,
+    "exported_at": "2026-08-25T20:48:21.652903",
+    "format": "json"
+  }
+}

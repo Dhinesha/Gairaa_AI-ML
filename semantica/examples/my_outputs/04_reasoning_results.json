@@ -1,0 +1,9 @@
+{
+  "inferred_facts": [
+    "SeniorContributor(Alice, ProjectAI)",
+    "SemanticaExpert(Alice)",
+    "KGSpecialist(Alice)",
+    "TechCorpUsesSemantica(True)"
+  ],
+  "explanation": "Given the premises: ProjectUses(ProjectAI, Semantica), OwnedBy(TechCorp, ProjectAI), we conclude: TechCorpUsesSemantica(True) using rule 'Rule 4'."
+}

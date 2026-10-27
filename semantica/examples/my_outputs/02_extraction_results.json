@@ -1,0 +1,95 @@
+{
+  "entities": [
+    {
+      "text": "Data Scientist",
+      "type": "PERSON"
+    },
+    {
+      "text": "Data Scientist",
+      "type": "PERSON"
+    },
+    {
+      "text": "Data Scientist",
+      "type": "PERSON"
+    },
+    {
+      "text": "Data Scientist",
+      "type": "PERSON"
+    },
+    {
+      "text": "2021",
+      "type": "DATE"
+    },
+    {
+      "text": "2021",
+      "type": "DATE"
+    },
+    {
+      "text": "2021",
+      "type": "DATE"
+    },
+    {
+      "text": "2021",
+      "type": "DATE"
+    },
+    {
+      "text": "Mention",
+      "type": "UNKNOWN"
+    },
+    {
+      "text": "Semantica",
+      "type": "UNKNOWN"
+    },
+    {
+      "text": "Semantica",
+      "type": "UNKNOWN"
+    },
+    {
+      "text": "Mention",
+      "type": "UNKNOWN"
+    },
+    {
+      "text": "Semantica",
+      "type": "UNKNOWN"
+    },
+    {
+      "text": "None",
+      "type": "UNKNOWN"
+    },
+    {
+      "text": "Mention",
+      "type": "UNKNOWN"
+    },
+    {
+      "text": "Semantica",
+      "type": "UNKNOWN"
+    },
+    {
+      "text": "None",
+      "type": "UNKNOWN"
+    }
+  ],
+  "relations": [
+    {
+      "subject": "?",
+      "predicate": "?",
+      "object": "?"
+    },
+    {
+      "subject": "?",
+      "predicate": "?",
+      "object": "?"
+    },
+    {
+      "subject": "?",
+      "predicate": "?",
+      "object": "?"
+    }
+  ],
+  "events": [
+    "[]",
+    "[]",
+    "[]"
+  ],
+  "triplet_count": 3
+}

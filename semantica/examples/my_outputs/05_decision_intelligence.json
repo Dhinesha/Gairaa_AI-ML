@@ -1,0 +1,14 @@
+{
+  "decisions_recorded": 3,
+  "compliance_result": "False",
+  "precedents_found": 0,
+  "multi_hop_hops": 5,
+  "provenance_stats": {
+    "total_entries": 10,
+    "entity_types": {
+      "entity": 9,
+      "relationship": 1
+    },
+    "unique_sources": 4
+  }
+}

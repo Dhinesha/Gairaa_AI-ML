@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "texts_processed": 3,
+    "entities_found": 9,
+    "relations_found": 1,
+    "events_found": 1,
+    "kg_nodes": 3,
+    "kg_edges": 0
+  },
+  "entities": [
+    {
+      "text": "Mention",
+      "type": "UNKNOWN",
+      "score": 0.5
+    },
+    {
+      "text": "Semantica",
+      "type": "UNKNOWN",
+      "score": 0.5
+    },
+    {
+      "text": "Semantica",
+      "type": "UNKNOWN",
+      "score": 0.5
+    },
+    {
+      "text": "Mention",
+      "type": "UNKNOWN",
+      "score": 0.5
+    },
+    {
+      "text": "Semantica",
+      "type": "UNKNOWN",
+      "score": 0.5
+    },
+    {
+      "text": "None",
+      "type": "UNKNOWN",
+      "score": 0.5
+    },
+    {
+      "text": "Mention",
+      "type": "UNKNOWN",
+      "score": 0.5
+    },
+    {
+      "text": "Semantica",
+      "type": "UNKNOWN",
+      "score": 0.5
+    },
+    {
+      "text": "None",
+      "type": "UNKNOWN",
+      "score": 0.5
+    }
+  ],
+  "relations": [
+    {
+      "subject": "?",
+      "predicate": "?",
+      "object": "?"
+    }
+  ],
+  "events": [
+    "[]"
+  ]
+}

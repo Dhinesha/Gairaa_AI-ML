@@ -5,3 +5,26 @@
 __pycache__/
 *.pyc
 *.pyo
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+venv/
+
+# Test and build files
+.pytest_cache/
+*.egg-info/semantica_git_backup/
+semantica_git_backup/
+semantica_git_backup/
+
+# Backup folder - do not upload
+semantica_git_backup/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo

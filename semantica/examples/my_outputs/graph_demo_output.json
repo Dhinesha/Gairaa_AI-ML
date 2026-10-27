@@ -1,0 +1,339 @@
+{
+  "nodes": [
+    {
+      "id": "Alice",
+      "type": "Person",
+      "content": "Alice",
+      "properties": {
+        "role": "Data Scientist",
+        "age": 30,
+        "skills": [
+          "Python",
+          "ML",
+          "Knowledge Graphs"
+        ]
+      },
+      "metadata": {
+        "role": "Data Scientist",
+        "age": 30,
+        "skills": [
+          "Python",
+          "ML",
+          "Knowledge Graphs"
+        ]
+      }
+    },
+    {
+      "id": "Bob",
+      "type": "Person",
+      "content": "Bob",
+      "properties": {
+        "role": "Software Engineer",
+        "age": 27,
+        "skills": [
+          "Python",
+          "FastAPI",
+          "Databases"
+        ]
+      },
+      "metadata": {
+        "role": "Software Engineer",
+        "age": 27,
+        "skills": [
+          "Python",
+          "FastAPI",
+          "Databases"
+        ]
+      }
+    },
+    {
+      "id": "Carol",
+      "type": "Person",
+      "content": "Carol",
+      "properties": {
+        "role": "Product Manager",
+        "age": 33,
+        "skills": [
+          "Strategy",
+          "Agile",
+          "Roadmaps"
+        ]
+      },
+      "metadata": {
+        "role": "Product Manager",
+        "age": 33,
+        "skills": [
+          "Strategy",
+          "Agile",
+          "Roadmaps"
+        ]
+      }
+    },
+    {
+      "id": "TechCorp",
+      "type": "Company",
+      "content": "TechCorp",
+      "properties": {
+        "industry": "Artificial Intelligence",
+        "founded": 2015,
+        "size": "Large (500+ employees)"
+      },
+      "metadata": {
+        "industry": "Artificial Intelligence",
+        "founded": 2015,
+        "size": "Large (500+ employees)"
+      }
+    },
+    {
+      "id": "DataLabs",
+      "type": "Company",
+      "content": "DataLabs",
+      "properties": {
+        "industry": "Data Analytics",
+        "founded": 2019,
+        "size": "Startup (50 employees)"
+      },
+      "metadata": {
+        "industry": "Data Analytics",
+        "founded": 2019,
+        "size": "Startup (50 employees)"
+      }
+    },
+    {
+      "id": "ProjectAI",
+      "type": "Project",
+      "content": "ProjectAI",
+      "properties": {
+        "status": "Active",
+        "domain": "Machine Learning",
+        "budget": "500000"
+      },
+      "metadata": {
+        "status": "Active",
+        "domain": "Machine Learning",
+        "budget": "500000"
+      }
+    },
+    {
+      "id": "ProjectGraph",
+      "type": "Project",
+      "content": "ProjectGraph",
+      "properties": {
+        "status": "Planning",
+        "domain": "Knowledge Graphs",
+        "budget": "200000"
+      },
+      "metadata": {
+        "status": "Planning",
+        "domain": "Knowledge Graphs",
+        "budget": "200000"
+      }
+    },
+    {
+      "id": "KnowledgeGraph",
+      "type": "Concept",
+      "content": "KnowledgeGraph",
+      "properties": {
+        "description": "A graph-based knowledge representation system",
+        "field": "Computer Science"
+      },
+      "metadata": {
+        "description": "A graph-based knowledge representation system",
+        "field": "Computer Science"
+      }
+    },
+    {
+      "id": "MachineLearning",
+      "type": "Concept",
+      "content": "MachineLearning",
+      "properties": {
+        "description": "Algorithms that learn from data",
+        "field": "Artificial Intelligence"
+      },
+      "metadata": {
+        "description": "Algorithms that learn from data",
+        "field": "Artificial Intelligence"
+      }
+    },
+    {
+      "id": "Semantica",
+      "type": "Tool",
+      "content": "Semantica",
+      "properties": {
+        "version": "0.6.5",
+        "license": "MIT",
+        "language": "Python"
+      },
+      "metadata": {
+        "version": "0.6.5",
+        "license": "MIT",
+        "language": "Python"
+      }
+    },
+    {
+      "id": "Neo4j",
+      "type": "Tool",
+      "content": "Neo4j",
+      "properties": {
+        "version": "5.0",
+        "license": "Community",
+        "language": "Java"
+      },
+      "metadata": {
+        "version": "5.0",
+        "license": "Community",
+        "language": "Java"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "71fffd43-b3da-5ffd-a6b2-e92a52de5dfb",
+      "familyId": "71fffd43-b3da-5ffd-a6b2-e92a52de5dfb",
+      "source": "Alice",
+      "target": "TechCorp",
+      "type": "works_at",
+      "weight": 1.0
+    },
+    {
+      "id": "defc298a-d5df-51b5-975d-1282802061fa",
+      "familyId": "defc298a-d5df-51b5-975d-1282802061fa",
+      "source": "Bob",
+      "target": "TechCorp",
+      "type": "works_at",
+      "weight": 1.0
+    },
+    {
+      "id": "3d4eccbc-85ea-5816-b0aa-c6a388726a60",
+      "familyId": "3d4eccbc-85ea-5816-b0aa-c6a388726a60",
+      "source": "Carol",
+      "target": "DataLabs",
+      "type": "works_at",
+      "weight": 1.0
+    },
+    {
+      "id": "d1775e6c-604f-52f5-9435-7b0d4395fc32",
+      "familyId": "d1775e6c-604f-52f5-9435-7b0d4395fc32",
+      "source": "Alice",
+      "target": "ProjectAI",
+      "type": "leads",
+      "weight": 1.0
+    },
+    {
+      "id": "b7455f2c-e8c4-5037-88af-046359e58cbb",
+      "familyId": "b7455f2c-e8c4-5037-88af-046359e58cbb",
+      "source": "Bob",
+      "target": "ProjectAI",
+      "type": "contributes_to",
+      "weight": 1.0
+    },
+    {
+      "id": "0f1ab73f-0b01-5851-98b1-11e6c2946372",
+      "familyId": "0f1ab73f-0b01-5851-98b1-11e6c2946372",
+      "source": "Carol",
+      "target": "ProjectGraph",
+      "type": "manages",
+      "weight": 1.0
+    },
+    {
+      "id": "9498fdd1-bc00-537e-9869-f696901ff71d",
+      "familyId": "9498fdd1-bc00-537e-9869-f696901ff71d",
+      "source": "Alice",
+      "target": "ProjectGraph",
+      "type": "advises",
+      "weight": 1.0
+    },
+    {
+      "id": "89ab54e6-2854-5e7b-ad77-ab700345ffb6",
+      "familyId": "89ab54e6-2854-5e7b-ad77-ab700345ffb6",
+      "source": "TechCorp",
+      "target": "ProjectAI",
+      "type": "owns",
+      "weight": 1.0
+    },
+    {
+      "id": "aa068e2f-fce5-51c1-a17c-13119019fd8c",
+      "familyId": "aa068e2f-fce5-51c1-a17c-13119019fd8c",
+      "source": "DataLabs",
+      "target": "ProjectGraph",
+      "type": "owns",
+      "weight": 1.0
+    },
+    {
+      "id": "4a0112f0-11b3-5947-8f8e-7bb5beaedd9b",
+      "familyId": "4a0112f0-11b3-5947-8f8e-7bb5beaedd9b",
+      "source": "ProjectAI",
+      "target": "Semantica",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "id": "9b39c084-a4b9-5503-9ca3-8446d7e68065",
+      "familyId": "9b39c084-a4b9-5503-9ca3-8446d7e68065",
+      "source": "ProjectGraph",
+      "target": "Semantica",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "id": "7ebcf622-4d41-5d8c-9cf0-d97eaed11552",
+      "familyId": "7ebcf622-4d41-5d8c-9cf0-d97eaed11552",
+      "source": "ProjectGraph",
+      "target": "Neo4j",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "id": "2a551518-a1ec-5d0e-8019-1a1bdaedf3a4",
+      "familyId": "2a551518-a1ec-5d0e-8019-1a1bdaedf3a4",
+      "source": "ProjectAI",
+      "target": "MachineLearning",
+      "type": "focuses_on",
+      "weight": 1.0
+    },
+    {
+      "id": "6945118b-fe25-5fb5-a847-77b518394757",
+      "familyId": "6945118b-fe25-5fb5-a847-77b518394757",
+      "source": "ProjectGraph",
+      "target": "KnowledgeGraph",
+      "type": "focuses_on",
+      "weight": 1.0
+    },
+    {
+      "id": "935ec3e1-291d-5ec3-8e86-7374672d3eb7",
+      "familyId": "935ec3e1-291d-5ec3-8e86-7374672d3eb7",
+      "source": "Alice",
+      "target": "KnowledgeGraph",
+      "type": "researches",
+      "weight": 1.0
+    },
+    {
+      "id": "c7457470-46a2-5d24-be6c-12aab3e2b007",
+      "familyId": "c7457470-46a2-5d24-be6c-12aab3e2b007",
+      "source": "Alice",
+      "target": "MachineLearning",
+      "type": "researches",
+      "weight": 1.0
+    },
+    {
+      "id": "98aa72d6-0c1d-52d9-b44a-cd187893f189",
+      "familyId": "98aa72d6-0c1d-52d9-b44a-cd187893f189",
+      "source": "Alice",
+      "target": "Bob",
+      "type": "collaborates_with",
+      "weight": 1.0
+    },
+    {
+      "id": "aac045a6-6bc5-5204-9bba-1f53c6153f36",
+      "familyId": "aac045a6-6bc5-5204-9bba-1f53c6153f36",
+      "source": "Alice",
+      "target": "Carol",
+      "type": "collaborates_with",
+      "weight": 1.0
+    }
+  ],
+  "statistics": {
+    "node_count": 11,
+    "edge_count": 18
+  }
+}

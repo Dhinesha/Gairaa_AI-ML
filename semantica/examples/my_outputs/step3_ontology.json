@@ -1,0 +1,90 @@
+{
+  "ontology": {
+    "uri": "https://example.org/techcorp-ontology",
+    "label": "TechCorp Knowledge Ontology",
+    "classes": [
+      {
+        "uri": "https://example.org/Person",
+        "name": "Person",
+        "label": "Person",
+        "description": "A human individual"
+      },
+      {
+        "uri": "https://example.org/Organisation",
+        "name": "Organisation",
+        "label": "Organisation",
+        "description": "A company or organization"
+      },
+      {
+        "uri": "https://example.org/Project",
+        "name": "Project",
+        "label": "Project",
+        "description": "A project or initiative"
+      },
+      {
+        "uri": "https://example.org/Concept",
+        "name": "Concept",
+        "label": "Concept",
+        "description": "An abstract concept or domain"
+      },
+      {
+        "uri": "https://example.org/Tool",
+        "name": "Tool",
+        "label": "Tool",
+        "description": "A software tool or framework"
+      }
+    ],
+    "properties": [
+      {
+        "uri": "https://example.org/works_at",
+        "label": "works_at",
+        "domain": "Person",
+        "range": "Organisation"
+      },
+      {
+        "uri": "https://example.org/leads",
+        "label": "leads",
+        "domain": "Person",
+        "range": "Project"
+      },
+      {
+        "uri": "https://example.org/contributes_to",
+        "label": "contributes_to",
+        "domain": "Person",
+        "range": "Project"
+      },
+      {
+        "uri": "https://example.org/uses",
+        "label": "uses",
+        "domain": "Project",
+        "range": "Tool"
+      },
+      {
+        "uri": "https://example.org/owns",
+        "label": "owns",
+        "domain": "Organisation",
+        "range": "Project"
+      },
+      {
+        "uri": "https://example.org/researches",
+        "label": "researches",
+        "domain": "Person",
+        "range": "Concept"
+      }
+    ],
+    "axioms": [
+      "Person works_at exactly one Organisation",
+      "Project must be owned by an Organisation"
+    ]
+  },
+  "competency_questions": [
+    "Who works at TechCorp?",
+    "Which projects does Alice lead?",
+    "What tools does ProjectAI use?",
+    "How are concepts connected to people?"
+  ],
+  "evaluation": {
+    "coverage_score": 0.0,
+    "completeness_score": 0.5
+  }
+}

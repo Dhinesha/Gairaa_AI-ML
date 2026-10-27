@@ -1,0 +1,10 @@
+{
+  "rules_applied": 3,
+  "base_facts_given": 5,
+  "new_facts_inferred": [
+    "SeniorContributor(Alice, ProjectAI)",
+    "SemanticaExpert(Alice)",
+    "KGSpecialist(Alice)"
+  ],
+  "explanation_example": "Given the premises: SemanticaExpert(Alice), Researches(Alice, KnowledgeGraph), we conclude: KGSpecialist(Alice) using rule 'Rule 3'."
+}
