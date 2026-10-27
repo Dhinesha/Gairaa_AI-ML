@@ -1,0 +1,14 @@
+{
+    "devil": {
+        "username": "devil",
+        "hashed_password": "$2b$12$DlkwYJr/nTBfRv2qFLn7AuDFFGo.lO8j.4Ae8N2QhZYgDBPOjsfCm"
+    },
+    "testuser_4e394cb2": {
+        "username": "testuser_4e394cb2",
+        "hashed_password": "$2b$12$i1rSuVYjsJAJe08ALHXJ7u580fJuZ7ciaMzYknsAGh1K10phYFicG"
+    },
+    "testuser_4c061b46": {
+        "username": "testuser_4c061b46",
+        "hashed_password": "$2b$12$Z5gC6lbwhFZ3NqYNJQgm3.spgUbBC4GUWz6G00FaOIaAxY2uWqNle"
+    }
+}

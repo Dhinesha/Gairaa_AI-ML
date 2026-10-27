@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explainable Sales Prediction — XAI Dashboard</title>
+    <meta name="description" content="A beginner-friendly Explainable AI dashboard that predicts sales outcomes and visually explains why using SHAP values.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <div class="header-badge">XAI Project</div>
+            <h1>Explainable Sales Prediction</h1>
+            <p class="header-sub">Predict if a transaction will result in <strong>High</strong> or <strong>Low</strong> Sales — and understand <strong>WHY</strong> the AI thinks so.</p>
+        </header>
+
+        <div class="container">
+            <!-- Left Side: Input Form -->
+            <section class="input-section">
+                <h2>📝 Transaction Details</h2>
+                <form id="prediction-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="quantity">📦 Quantity</label>
+                            <input type="number" id="quantity" name="quantity" value="80" min="1" required>
+                            <span class="input-hint">Number of items sold</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="unit_price">💰 Unit Price (₹)</label>
+                            <input type="number" id="unit_price" name="unit_price" value="500" min="1" required>
+                            <span class="input-hint">Price per single item</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="discount">🏷️ Discount (%)</label>
+                            <input type="number" id="discount" name="discount" value="5" min="0" max="100" required>
+                            <span class="input-hint">0 = no discount, 50 = half price</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="shipping_cost">🚚 Shipping Cost (₹)</label>
+                            <input type="number" id="shipping_cost" name="shipping_cost" value="50" min="0" required>
+                            <span class="input-hint">Delivery charges</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="region">🌍 Region</label>
+                            <select id="region" name="region" required>
+                                <option value="North">North</option>
+                                <option value="South" selected>South</option>
+                                <option value="East">East</option>
+                                <option value="West">West</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">🛍️ Category</label>
+                            <select id="category" name="category" required>
+                                <option value="Electronics" selected>Electronics</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Home">Home</option>
+                                <option value="Beauty">Beauty</option>
+                                <option value="Sports">Sports</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customer_type">👤 Customer Type</label>
+                            <select id="customer_type" name="customer_type" required>
+                                <option value="Retail" selected>Retail</option>
+                                <option value="Wholesale">Wholesale</option>
+                                <option value="Corporate">Corporate</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment_method">💳 Payment Method</label>
+                            <select id="payment_method" name="payment_method" required>
+                                <option value="Credit Card" selected>Credit Card</option>
+                                <option value="Cash">Cash</option>
+                                <option value="UPI">UPI</option>
+                                <option value="Bank Transfer">Bank Transfer</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="predict-btn">
+                        <span class="btn-icon">🔮</span> Predict & Explain
+                    </button>
+                </form>
+                <div id="error-message" class="error hidden"></div>
+
+                <!-- What is XAI? info box -->
+                <div class="xai-info-box">
+                    <h4>🤔 What is XAI?</h4>
+                    <p><strong>Explainable AI (XAI)</strong> means the AI doesn't just give you an answer — it also tells you <em>why</em> it made that decision. This project uses <strong>SHAP values</strong> to measure how much each input (quantity, discount, etc.) influenced the prediction.</p>
+                </div>
+            </section>
+
+            <!-- Right Side: Results & Explanations -->
+            <section class="results-section">
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing transaction & generating explanation...</p>
+                </div>
+
+                <div id="result-content" class="hidden">
+
+                    <!-- 1. PREDICTION RESULT with Confidence Gauge -->
+                    <div class="prediction-card" id="prediction-card">
+                        <h3>🎯 Prediction Result</h3>
+                        <div class="pred-result-row">
+                            <div id="pred-class" class="pred-badge high-sales">HIGH SALES</div>
+                        </div>
+                        <div class="confidence-section">
+                            <p class="confidence-label">AI Confidence</p>
+                            <div class="confidence-bar-track">
+                                <div class="confidence-bar-fill" id="confidence-fill" style="width: 0%"></div>
+                            </div>
+                            <p class="confidence-value" id="confidence-value">0%</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. STORY: Simple narrative explanation -->
+                    <div class="story-card">
+                        <h3>📖 What Happened? (Simple Explanation)</h3>
+                        <div class="story-text" id="story-text">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+
+                    <!-- 3. VISUAL FACTOR CARDS -->
+                    <div class="factors-card">
+                        <h3>🔍 What Influenced the Prediction?</h3>
+                        <p class="factors-subtitle">Each factor below pushed the AI's decision toward High Sales or Low Sales. Bigger bars = bigger influence.</p>
+                        <div class="factor-list" id="factor-list">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+
+                    <!-- 4. ACTIONABLE SUGGESTIONS -->
+                    <div class="suggestions-card" id="suggestions-card">
+                        <h3>💡 What Could Change the Outcome?</h3>
+                        <div class="suggestions-list" id="suggestions-list">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+
+                    <!-- 5. TECHNICAL DETAILS (collapsible) -->
+                    <details class="technical-details">
+                        <summary>⚙️ Technical SHAP Details (for advanced users)</summary>
+                        <div class="tech-content">
+                            <p class="tech-subtitle">Raw SHAP values — each number shows how much a feature pushed the prediction toward High Sales (+) or Low Sales (−).</p>
+                            <div class="shap-chart" id="shap-chart">
+                                <!-- Bars will be inserted here by JS -->
+                            </div>
+                        </div>
+                    </details>
+
+                </div>
+
+                <div id="empty-state" class="empty-state">
+                    <div class="empty-icon">🔮</div>
+                    <h3>Ready to Predict</h3>
+                    <p>Fill in the transaction details on the left and click <strong>"Predict & Explain"</strong> to see the AI's prediction and a clear explanation of <em>why</em> it made that decision.</p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>Built with ❤️ using <strong>Random Forest</strong> + <strong>SHAP</strong> (SHapley Additive exPlanations) • Beginner XAI Project</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
