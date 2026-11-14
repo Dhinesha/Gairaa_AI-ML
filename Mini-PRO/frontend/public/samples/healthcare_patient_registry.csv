@@ -1,0 +1,7 @@
+patient_id,patient_name,age,blood_group,diagnosis,attending_physician,admission_date,bill_amount_usd,insurance_covered
+PAT-1001,Arthur Dent,42,O+,Cardiac Arrhythmia,Dr. Sarah Connor,2026-10-15,14500.0,Yes
+PAT-1002,Eleanor Vance,29,A+,Pneumonia Infection,Dr. Robert Chen,2026-10-18,4200.5,Yes
+PAT-1003,Marcus Aurelius,58,B-,Hypertensive Crisis,Dr. Sarah Connor,2026-10-22,8900.0,No
+PAT-1004,Clara Oswald,31,AB+,Fractured Fibula,Dr. John Watson,2026-10-25,6100.75,Yes
+PAT-1005,Logan Howlett,45,O-,Acute Trauma Recovery,Dr. Robert Chen,2026-10-29,23400.0,Yes
+PAT-1006,Maya Lin,24,A-,Severe Migraine Complex,Dr. John Watson,2026-11-02,1850.0,Yes

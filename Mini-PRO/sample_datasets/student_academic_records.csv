@@ -1,0 +1,9 @@
+student_id,name,department,year_of_study,semester_gpa,attendance_pct,placement_status,internship_credits
+STU-2021-001,Dhinesha Gnanavel,Artificial Intelligence & Data Science,Final Year,3.92,94.5,Placed (AI Safety Lab),8
+STU-2021-002,Alex Mercer,Computer Science & Engineering,Final Year,3.85,91.0,Placed (CloudCorp),6
+STU-2021-003,Kavitha Raman,Cyber Security & Forensics,Final Year,3.95,96.2,Placed (CyberDefense),8
+STU-2022-014,Priya Sundaram,Artificial Intelligence & Data Science,Third Year,3.78,88.5,Seeking Internship,4
+STU-2022-015,Rahul Sharma,Information Technology,Third Year,3.65,82.0,Seeking Internship,4
+STU-2023-042,Elena Rostova,Data Science & Machine Learning,Second Year,3.82,93.0,Eligible,2
+STU-2023-043,Siddharth Rao,Computer Science & Engineering,Second Year,3.7,85.5,Eligible,2
+STU-2024-088,Ananya Krishnan,Artificial Intelligence & Data Science,First Year,3.88,97.0,Foundation,0

@@ -1,0 +1,6 @@
+order_id,customer_name,category,product_name,quantity,unit_price,total_amount,payment_method,delivery_status
+ORD-901,Arun Kumar,Hardware,Tensor Processing Unit (TPU v4),2,1850.0,3700.0,Corporate Card,Delivered
+ORD-902,Sophia Zhang,Electronics,Edge AI Camera Sensor Kit,5,240.0,1200.0,UPI / Instant,In Transit
+ORD-903,Michael Scott,Infrastructure,Rackmount Server Chassis 4U,1,890.0,890.0,Purchase Order,Processing
+ORD-904,Deepa Nair,Hardware,Quantum Noise Resilient Cryptochip,4,620.0,2480.0,Corporate Card,Delivered
+ORD-905,Kenji Sato,Peripherals,High-Speed NVMe Array 8TB,3,450.0,1350.0,Credit Card,Dispatched

@@ -28,3 +28,18 @@ semantica_git_backup/
 __pycache__/
 *.pyc
 *.pyo
+
+# Environment secrets
+.env
+**/.env
+
+# Python cache
+**/__pycache__/
+**/.pytest_cache/
+*.pyc
+
+# Local database
+Mini-PRO/safety_engine.db
+
+# Uploaded local data
+Mini-PRO/uploads/
